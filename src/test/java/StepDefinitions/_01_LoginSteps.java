@@ -8,7 +8,7 @@ public class _01_LoginSteps{
 
     DialogContent dc =new DialogContent();
 
-    @Given("navigate to campus")
+    @Given("Navigate to campus")
     public void navigateToCampus() {
         GWD.getDriver().get("https://test.mersys.io/");
 

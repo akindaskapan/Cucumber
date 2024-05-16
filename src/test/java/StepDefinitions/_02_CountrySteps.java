@@ -28,6 +28,15 @@ public class _02_CountrySteps {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.findAndContainsText("success","Country successfully created");
+        dc.findAndContainsText("success","successfully");
+    }
+
+    @When("Create a country name as {string} code as {string}")
+    public void createACountryNameAsCodeAs(String name, String code) {
+        dc.findAndClick("add");
+        dc.findAndSend("nameInput",name);
+        dc.findAndSend("codeInput",code);
+        dc.findAndClick("save");
+
     }
 }

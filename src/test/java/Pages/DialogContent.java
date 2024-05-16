@@ -31,7 +31,18 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]") //ortak successMsg
     private WebElement successMessage;
+    
+    @FindBy(xpath ="//ms-text-field[@formcontrolname=\"shortName\"]//input")
+    private WebElement shortName;
+    
+    @FindBy(xpath = "//div[contains(text(),'already exists')]")
+    private WebElement alreadyExist;
 
+    @FindBy(xpath = "//button[@aria-label='Close dialog']")
+    private WebElement closeDialog;
+
+    @FindBy(xpath="//button[@aria-label='Close']")
+    private WebElement closeAlertButton;
 
     WebElement myElement;
 
@@ -44,6 +55,7 @@ public class DialogContent extends Parent{
             case "password": myElement=passwordInputBox;break;
             case "nameInput": myElement=nameInput;break;
             case "codeInput": myElement=codeInput;break;
+            case "shortName": myElement=shortName;break;
         }
 sendkeysFunction(myElement,value);
     }
@@ -56,6 +68,8 @@ sendkeysFunction(myElement,value);
             case "loginButton": myElement=loginButton;break;
             case "add": myElement=addButton;break;
             case "save": myElement=saveButton;break;
+            case "closeDialog": myElement=closeDialog;break;
+            case "closeAlert": myElement=closeAlertButton;break;
         }
 clickFunction(myElement);
     }
@@ -67,9 +81,9 @@ public void findAndContainsText(String strElement,String text){
         {
             case "dashboard": myElement=dashboardText;break;
             case "success": myElement=successMessage;break;
+            case "alreadyExist": myElement=alreadyExist;break;
         }
         verifyContainsText(myElement,text);
-
     }
 
 
