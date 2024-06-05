@@ -26,6 +26,11 @@ private WebElement countries;
 @FindBy (xpath = "//span[text()='Citizenships']")
 private WebElement citizenship;
 
+@FindBy(xpath = "//span[text()='Nationalities']")
+private WebElement nationalities;
+@FindBy(xpath = "//span[text()='Fees']")
+private WebElement fees;
+
 public WebElement myElement;
 
     public void findAndClick(String strElement){
@@ -33,10 +38,12 @@ public WebElement myElement;
         //Stringten WebElemente ulaşalım
         switch (strElement)
         {
-            case "setup": myElement=setup1;break;
+            case "setup1": myElement=setup1;break;
             case "parameters": myElement=parameters;break;
             case "countries": myElement=countries;break;
             case "citizenship": myElement=citizenship;break;
+            case "nationalities": myElement=nationalities;break;
+            case "fees": myElement=fees;break;
         }
         clickFunction(myElement);
     }

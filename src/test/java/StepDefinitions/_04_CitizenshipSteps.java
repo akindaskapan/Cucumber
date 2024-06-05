@@ -38,6 +38,8 @@ dc.findAndClick("closeDialog");
     }
 
 
-
-
+    @When("User delete the {string}")
+    public void userDeleteThe(String arananKelime) {
+        dc.searchAndDelete(arananKelime);
+    }
 }
