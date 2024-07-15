@@ -5,8 +5,6 @@ Feature: Datatable Functionality
     When Enter username and password and click login button
     Then User should login successfully
 
-
-
     Scenario: Create Country
       And  Click on the element in the Left Nav
         | setup1     |
@@ -15,14 +13,14 @@ Feature: Datatable Functionality
       And Click on the element in the Dialog
       |add|
       And User sending the keys in Dialog Content
-      |nameInput|testingz1907|
-      |codeInput|190719071|
+      |nameInput|testingakin|
+      |codeInput|19071907190701|
       And Click on the element in the Dialog
       |save|
       And Success message should be displayed
 
       And User delete item from Dialog
-        |testingz1907|
+        |testingakin|
       And Success message should be displayed
 
 
@@ -35,13 +33,13 @@ Feature: Datatable Functionality
         And Click on the element in the Dialog
         |add|
         And User sending the keys in Dialog Content
-        |nameInput|testinGIst190|
+        |nameInput|testinGIst190akin|
         And Click on the element in the Dialog
         |save|
         And Success message should be displayed
 
         And User delete item from Dialog
-        |testinGIst190|
+        |testinGIst190akin|
         And Success message should be displayed
 
 
@@ -56,14 +54,14 @@ Feature: Datatable Functionality
           And Click on the element in the Dialog
           |add|
           And User sending the keys in Dialog Content
-          |nameInput|190testingfEE|
-          |codeInput|19071907|
-          |integrationCode|343419|
-          |priority|9019989190|
+          |nameInput|190testingfEEakin|
+          |codeInput|190719071907|
+          |integrationCode|3434191907|
+          |priority|121907|
           #priority kısmı için parent classındaki sendKeysFunction metodundaki .clear komutunun devre  dışı bırakılması gerekiyor
           And Click on the element in the Dialog
           |toggleBar|
           |saveAndClose|
           And User delete item from Dialog
-          |190testingfEE|
+          |190testingfEEakin|
           And Success message should be displayed

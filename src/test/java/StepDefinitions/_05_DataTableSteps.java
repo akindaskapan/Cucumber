@@ -18,8 +18,6 @@ public class _05_DataTableSteps {
         for (int i = 0; i < strLinkList.size(); i++) {
             ln.findAndClick(strLinkList.get(i));
         }
-
-
     }
 
 

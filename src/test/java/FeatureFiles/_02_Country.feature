@@ -1,7 +1,7 @@
 Feature: Country Functionality
 
   Scenario: Create Country
-    Given navigate to campus
+    Given Navigate to campus
     When Enter username and password and click login button
     Then User should login successfully
     And Navigate to country page

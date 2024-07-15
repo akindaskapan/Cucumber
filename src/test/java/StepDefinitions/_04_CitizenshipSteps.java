@@ -12,7 +12,7 @@ public class _04_CitizenshipSteps {
     LeftNav ln=new LeftNav();
     @And("Navigate to Citizenship page")
     public void navigateToCitizenshipPage() {
-        ln.findAndClick("setup");
+        ln.findAndClick("setup1");
         ln.findAndClick("parameters");
         ln.findAndClick( "citizenship");
     }

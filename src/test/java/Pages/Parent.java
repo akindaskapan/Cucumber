@@ -14,7 +14,7 @@ public class Parent {
     public void sendkeysFunction(WebElement element, String value) {
         waitUntilVisible(element);//element gözükene kadar bekle
         scrollToElement(element);//elemente kadar kaydır
-        element.clear();//temizle
+        //element.clear();//temizle
         element.sendKeys(value);//değeri gönder
     }
 
