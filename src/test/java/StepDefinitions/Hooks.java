@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Utilities.GWD;
+import com.aventstack.extentreports.service.ExtentTestManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -23,8 +24,8 @@ public class Hooks {
     public void after(Scenario scenario)
     {
         System.out.println("Senaryo Bitti");
-        System.out.println("scenario sonucu="+ scenario.getStatus());
-        System.out.println("scenario isFailed ?="+ scenario.isFailed());
+        System.out.println("scenario sonucu = "+ scenario.getStatus());
+        System.out.println("scenario isFailed ? = "+ scenario.isFailed());
 
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
@@ -34,6 +35,10 @@ public class Hooks {
             // klasöre
             TakesScreenshot screenshot = (TakesScreenshot) GWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
+
+            //Extent Report'a ekliyor
+            ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
+
 
             try {
                 FileUtils.copyFile(ekranDosyasi,
@@ -49,7 +54,10 @@ public class Hooks {
     }
 
 
-
+    public String getBase64Screenshot()
+    {
+        return ((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BASE64);
+    }
 
 
 

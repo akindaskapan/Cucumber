@@ -7,7 +7,7 @@
       When Enter username and password and click login button
       Then User should login successfully
 
-
+@Regression
     Scenario: Create Entrance Exam
       And Click on the element in the Left Nav
       |entranceExam1|

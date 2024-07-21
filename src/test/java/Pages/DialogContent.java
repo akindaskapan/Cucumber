@@ -21,12 +21,12 @@ public class DialogContent extends Parent {
     private WebElement usernameInputBox;
     @FindBy(xpath = "//input[@id=\"mat-input-1\"]")
     private WebElement passwordInputBox;
-    @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
+    @FindBy(xpath = "//button[@aria-label=\"LOGIN\"]")
     private WebElement loginButton;
     @FindBy(xpath = "//span[text()=' Dashboard ']")
     private WebElement dashboardText;
 
-    @FindBy(xpath = "//ms-add-button[@tooltip=\"GENERAL.BUTTON.ADD\"]//button") //ortak add butonu
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip, 'ADD')]//button") //ortak add butonu
     private WebElement addButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")  //ortak nameInputBox
     private WebElement nameInput;
